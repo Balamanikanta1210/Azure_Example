@@ -23,5 +23,3 @@ steps:
     processName: 'Azure_Demo'
     folderName: 'Test'
     user: 'uipath\balamanikanta.krishn'
-    
-    
