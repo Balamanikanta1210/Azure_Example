@@ -24,9 +24,4 @@ steps:
     folderName: 'Test'
     user: 'uipath\balamanikanta.krishn'
     
-    - task: UiPathPack@2
-      inputs:
-        versionType: 'CurrentVersion'
-        projectJsonPath: '$(Build.SourcesDirectory)'
-        orchestratorConnection: 'Uipath_Testing'
-        outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    
