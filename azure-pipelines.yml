@@ -22,7 +22,6 @@ steps:
     orchestratorConnection: 'Uipath_Testing'
     processName: 'Azure_Demo'
     folderName: 'Test'
-    jobType: 'TestAutomation'
-    machine: 'DESKTOP-DKPHE2O'
     user: 'uipath\balamanikanta.krishn'
+  
     
