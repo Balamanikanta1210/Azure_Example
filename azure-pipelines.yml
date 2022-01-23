@@ -17,9 +17,29 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+ 
+      
 - task: UiPathRunJob@2
   inputs:
     orchestratorConnection: 'Uipath_Testing'
     processName: 'Azure_Demo'
     folderName: 'Test'
     user: 'uipath\balamanikanta.krishn'
+- task: UiPathPack@2
+  inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: '$(Build.SourcesDirectory)'
+    outputType: 'Process'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    orchestratorConnection: 'Uipath_Testing'
+
+- task: UiPathTest@2
+  inputs:
+    testTarget: 'TestProject'
+    orchestratorConnection: 'Uipath_Testing'
+    folderName: 'Test'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
