@@ -32,19 +32,20 @@ steps:
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     orchestratorConnection: 'Uipath_Testing'
+
+#- task: UiPathTest@2
+#  inputs:
+#    testTarget: 'TestProject'
+#    orchestratorConnection: 'Uipath_Testing'
+#    folderName: 'Test'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 - task: UiPathDeploy@2
   inputs:
     orchestratorConnection: 'Uipath_Testing'
     packagesPath: '$(System.DefaultWorkingDirectory)/_Balamanikanta1210.Azure_Example'
     folderName: 'Modren Example'
     entryPoints: 'Main.xaml'
-- task: UiPathTest@2
-  inputs:
-    testTarget: 'TestProject'
-    orchestratorConnection: 'Uipath_Testing'
-    folderName: 'Test'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
