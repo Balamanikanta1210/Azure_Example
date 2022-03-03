@@ -19,12 +19,12 @@ steps:
   displayName: 'Run a multi-line script'
  
       
-- task: UiPathRunJob@2
-  inputs:
-    orchestratorConnection: 'Uipath_Testing'
-    processName: 'Azure_Demo'
-    folderName: 'Modren Example'
-    user: 'uipath\balamanikanta.krishn'
+#- task: UiPathRunJob@2
+#  inputs:
+#    orchestratorConnection: 'Uipath_Testing'
+#    processName: 'Azure_Demo'
+#    folderName: 'Modren Example'
+#    user: 'uipath\balamanikanta.krishn'
 - task: UiPathPack@2
   inputs:
     versionType: 'AutoVersion'
