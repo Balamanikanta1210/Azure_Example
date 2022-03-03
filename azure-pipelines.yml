@@ -23,7 +23,7 @@ steps:
   inputs:
     orchestratorConnection: 'Uipath_Testing'
     processName: 'Azure_Demo'
-    folderName: 'Test'
+    folderName: 'Modren Example'
     user: 'uipath\balamanikanta.krishn'
 - task: UiPathPack@2
   inputs:
