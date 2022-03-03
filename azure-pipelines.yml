@@ -32,7 +32,12 @@ steps:
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     orchestratorConnection: 'Uipath_Testing'
-
+- task: UiPathDeploy@2
+  inputs:
+    orchestratorConnection: 'Uipath_Testing'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: 'Modren Example'
+    entryPoints: 'Main.xaml'
 - task: UiPathTest@2
   inputs:
     testTarget: 'TestProject'
