@@ -47,5 +47,5 @@ steps:
   inputs:
     orchestratorConnection: 'Uipath_Testing'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
-    folderName: 'Modren Example'
+    folderName: 'Test'
     entryPoints: 'Main.xaml'
