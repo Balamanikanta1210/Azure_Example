@@ -33,11 +33,11 @@ steps:
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     orchestratorConnection: 'Uipath_Testing'
 
-#- task: UiPathTest@2
-#  inputs:
-#    testTarget: 'TestProject'
-#    orchestratorConnection: 'Uipath_Testing'
-#    folderName: 'Test'
+- task: UiPathTest@2
+  inputs:
+    testTarget: 'TestProject'
+    orchestratorConnection: 'Uipath_Testing'
+    folderName: 'Test'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
