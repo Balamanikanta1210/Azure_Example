@@ -25,6 +25,12 @@ steps:
 #    processName: 'Azure_Demo'
 #    folderName: 'Modren Example'
 #    user: 'uipath\balamanikanta.krishn'
+- task: UiPathAssets@2
+  inputs:
+    orchestratorConnection: 'UipathOrch'
+    folderName: 'Test'
+    assetActionType: 'Deploy'
+    csvFile: 'C:\agent\_work\2\s\test.csv'
 - task: UiPathPack@2
   inputs:
     versionType: 'AutoVersion'
