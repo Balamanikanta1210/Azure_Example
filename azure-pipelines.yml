@@ -37,12 +37,12 @@ steps:
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-    orchestratorConnection: 'Uipath_Testing'
+    orchestratorConnection: 'UipathOrch'
 
 - task: UiPathTest@2
   inputs:
     testTarget: 'TestProject'
-    orchestratorConnection: 'Uipath_Testing'
+    orchestratorConnection: 'UipathOrch'
     folderName: 'Test'
 - task: PublishBuildArtifacts@1
   inputs:
