@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage:'windows-latest'
+  Azure Pipelines
 
 steps:
 - script: echo Hello, world!
