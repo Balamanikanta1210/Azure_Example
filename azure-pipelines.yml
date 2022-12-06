@@ -25,7 +25,7 @@ steps:
 #    processName: 'Azure_Demo'
 #    folderName: 'Modren Example'
 #    user: 'uipath\balamanikanta.krishn'
-
+- task: UiPathInstallPlatform@2
 - task: UiPathPack@2
   inputs:
     versionType: 'AutoVersion'
