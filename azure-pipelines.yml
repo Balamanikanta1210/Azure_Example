@@ -25,6 +25,10 @@ steps:
 #    processName: 'Azure_Demo'
 #    folderName: 'Modren Example'
 #    user: 'uipath\balamanikanta.krishn'
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '6.0.7'
 - task: UiPathInstallPlatform@2
 - task: UiPathPack@2
   inputs:
