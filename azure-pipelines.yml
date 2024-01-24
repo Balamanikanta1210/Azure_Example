@@ -29,11 +29,13 @@ steps:
   inputs:
     packageType: 'sdk'
     version: '6.0.7'
-- task: UiPathInstallPlatform@2
+- task: UiPathInstallPlatform@4
+  inputs:
+    cliVersion: 'WIN_23.6.8581.19168'
 - task: UiPathPack@2
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)'
+    projectJsonPath: 'C:\Users\balamanikanta.krishn\Downloads\LIBRARY_CL_SendOutlookEmail\project.json'
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     orchestratorConnection: 'UipathOrch'
