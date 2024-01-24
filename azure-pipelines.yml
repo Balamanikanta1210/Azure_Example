@@ -37,9 +37,16 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: 'C:\Users\balamanikanta.krishn\Downloads\LIBRARY_CL_SendOutlookEmail\project.json'
-    outputType: 'Process'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    outputType: 'Library'
     orchestratorConnection: 'UipathOrch'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+#- task: UiPathPack@4
+#  inputs:
+#    versionType: 'AutoVersion'
+#    projectJsonPath: 'C:\Users\balamanikanta.krishn\Downloads\LIBRARY_CL_SendOutlookEmail\project.json'
+#    outputType: 'Process'
+#    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+#    orchestratorConnection: 'UipathOrch'
 - task: UiPathDeploy@2
   inputs:
     orchestratorConnection: 'UipathOrch'
