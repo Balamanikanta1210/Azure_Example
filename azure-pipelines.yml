@@ -10,7 +10,7 @@ pool:
   Default
 
 steps:
-- script: echo Hello, world!
+- script: C:\Program Files\dotnet\dotnet.exe
   displayName: 'Run a one-line script'
 
 - script: |
