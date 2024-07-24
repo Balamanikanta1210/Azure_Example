@@ -27,7 +27,8 @@ steps:
 #    version: '6.0.7'
 - task: UiPathInstallPlatform@4
   inputs:
-    cliVersion: 'WIN_23.4.8951.9936'
+    cliVersion: 'WIN_23.10.8894.39673'
+    cliNupkgPath: 'C:\Users\balamanikanta.krishn\Desktop\CLI Demo\UiPath.CLI.Windows.23.10.8894.39673.nupkg'
 - task: UiPathPack@4
   inputs:
     versionType: 'AutoVersion'
