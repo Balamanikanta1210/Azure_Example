@@ -14,7 +14,6 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
- 
       
 #- task: UiPathRunJob@2
 #  inputs:
@@ -28,8 +27,7 @@ steps:
 #    version: '6.0.7'
 - task: UiPathInstallPlatform@4
   inputs:
-    cliVersion: 'WIN_23.6.8581.19168'
-    cliNupkgPath: 'C:\agent1\_work\_tool\nupkg\UiPath.CLI.Windows.23.6.8581.19168.nupkg'
+    cliVersion: 'WIN_23.4.8951.9936'
 - task: UiPathPack@4
   inputs:
     versionType: 'AutoVersion'
