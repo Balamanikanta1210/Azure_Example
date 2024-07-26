@@ -25,10 +25,18 @@ steps:
 #  inputs:
 #    packageType: 'sdk'
 #    version: '6.0.7'
+- task: DownloadPackage@1
+  inputs:
+    packageType: 'nuget'
+    feed: '7eff2d39-89ec-455f-9dcd-3610dfbf0507/c3c48568-0c03-47a7-85ff-3593837585a4'
+    view: '745595e6-41f7-4661-ab14-6f538f640c92'
+    definition: 'b5dc1268-9a57-4fbb-858d-2984fdf9846a'
+    version: '23.4.8951.9936'
+    downloadPath: '$(System.ArtifactsDirectory)'
 - task: UiPathInstallPlatform@4
   inputs:
     cliVersion: 'WIN_23.10.8894.39673'
-    cliNupkgPath: 'C:\Users\balamanikanta.krishn\Desktop\CLI Demo\UiPath.CLI.Windows.23.10.8894.39673.nupkg'
+    cliNupkgPath: '$(System.ArtifactsDirectory)/UiPath.CLI.Windows.nupkg'
 - task: UiPathPack@4
   inputs:
     versionType: 'AutoVersion'
