@@ -32,6 +32,7 @@ steps:
     view: '745595e6-41f7-4661-ab14-6f538f640c92'
     definition: 'b5dc1268-9a57-4fbb-858d-2984fdf9846a'
     version: '23.4.8951.9936'
+    extract: false
     downloadPath: '$(System.ArtifactsDirectory)'
 - task: UiPathInstallPlatform@4
   inputs:
