@@ -31,6 +31,6 @@ steps:
       # UiPath Pack Task
       & echo "Hello World"
       & echo "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe"
-      & $cliPath= "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe"
+      $cliPath = "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe"
       & echo $cliPath
       & $cliPath package pack "$(Build.SourcesDirectory)\project.json" -o "$(Build.SourcesDirectory)\Output"
