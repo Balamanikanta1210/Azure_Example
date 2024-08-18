@@ -29,5 +29,5 @@ steps:
     targetType: 'inline'
     script: |
       # UiPath Pack Task
-      echo "Hello World"
-      "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe" package pack "$(Build.SourcesDirectory)\project.json" -o "$(Build.SourcesDirectory)\Output"
+      & echo "Hello World"
+      & "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe" package pack "$(Build.SourcesDirectory)\project.json" -o "$(Build.SourcesDirectory)\Output"
