@@ -15,15 +15,15 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
       
-#- task: DownloadPackage@1
-#  inputs:
-#    packageType: 'nuget'
-#    feed: '7eff2d39-89ec-455f-9dcd-3610dfbf0507/c3c48568-0c03-47a7-85ff-3593837585a4'
-#    view: '745595e6-41f7-4661-ab14-6f538f640c92'
-#    definition: 'b5dc1268-9a57-4fbb-858d-2984fdf9846a'
-#    version: '23.4.8951.9936'
-#    extract: true
-#    downloadPath: '$(System.ArtifactsDirectory)\CLI'
+- task: DownloadPackage@1
+  inputs:
+    packageType: 'nuget'
+    feed: '7eff2d39-89ec-455f-9dcd-3610dfbf0507/c3c48568-0c03-47a7-85ff-3593837585a4'
+    view: '745595e6-41f7-4661-ab14-6f538f640c92'
+    definition: 'b5dc1268-9a57-4fbb-858d-2984fdf9846a'
+    version: '23.4.8951.9936'
+    extract: true
+    downloadPath: '$(System.ArtifactsDirectory)\CLI'
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
