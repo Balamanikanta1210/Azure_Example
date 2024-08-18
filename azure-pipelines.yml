@@ -29,8 +29,6 @@ steps:
     targetType: 'inline'
     script: |
       # UiPath Pack Task
-      & echo "Hello World"
-      & echo "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe"
       $cliPath = "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe"
-      & echo $cliPath
       & $cliPath package pack "$(Build.SourcesDirectory)\project.json" -o "$(Build.SourcesDirectory)\Output"
+      & $cliPath package deploy "$(Build.SourcesDirectory)\Output" "https://cloud.uipath.com/" DefaultTenant -A walmazwnmqbk -I a713bc24-1ef3-4e10-bbdb-6a7594582fea -S s8%0@8bSPKXXefhr --applicationScope "OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines.Read OR.Monitoring OR.Robots.Read OR.Settings.Read OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users.Read" -o "Test/Sub"
