@@ -29,7 +29,5 @@ steps:
     targetType: 'inline'
     script: |
       # UiPath Pack Task
-      $cliPath = "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe"
-      Write-Host "##vso[task.setvariable variable=CLIPath]$cliPath"
-      echo $cliPath
-      $cliPath package pack $(Build.SourcesDirectory) -o $(Build.ArtifactStagingDirectory)\Output
+      echo "Hello World"
+      "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe" package pack "$(Build.SourcesDirectory)\project.json" -o "$(Build.SourcesDirectory)\Output"
