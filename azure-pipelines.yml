@@ -32,4 +32,4 @@ steps:
       $cliPath = "$(System.ArtifactsDirectory)\CLI\tools\uipcli.exe"
       Write-Host "##vso[task.setvariable variable=CLIPath]$cliPath"
       echo $cliPath
-      $cliPath pack $(Build.SourcesDirectory) -o $(Build.ArtifactStagingDirectory)\Output
+      $cliPath package pack $(Build.SourcesDirectory) -o $(Build.ArtifactStagingDirectory)\Output
