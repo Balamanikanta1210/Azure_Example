@@ -15,10 +15,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
       
-- task: NodeTool@0
+- task: NodeTaskRunnerInstaller@0
   inputs:
-    versionSpec: '20.x'
-  displayName: 'Install Node.js'
+    nodeVersion: '20'
 - task: UiPathInstallPlatform@5
   inputs:
     cliVersion: 'WIN_24.10.9050.17872'
