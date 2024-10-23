@@ -15,6 +15,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
       
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
 - task: DownloadPackage@1
   inputs:
     packageType: 'nuget'
