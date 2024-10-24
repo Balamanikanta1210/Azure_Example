@@ -23,7 +23,7 @@ steps:
     node -v  # Check the installed Node.js version
     npm -v   # Check the installed npm version
   displayName: 'Verify Node.js and npm'
-- task: UiPathInstallPlatform@5
+- task: UiPathInstallPlatform-preview@5
   inputs:
     cliVersion: 'WIN_24.10.9050.17872'
 - task: DownloadPackage@1
