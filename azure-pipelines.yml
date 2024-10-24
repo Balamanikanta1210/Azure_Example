@@ -18,7 +18,7 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSource: 'spec'
-    versionSpec: '20.x'
+    versionSpec: '10.x'
 - script: |
     node -v  # Check the installed Node.js version
     npm -v   # Check the installed npm version
