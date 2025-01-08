@@ -13,7 +13,7 @@ pipeline {
                 UiPathPack( 
                     disableBuiltInNugetFeeds: false,
                     outputPath: '${WORKSPACE}\\Output',
-                    projectJsonPath: '${WORKSPACE}\\custom-folder\\project.json',
+                    projectJsonPath: '${WORKSPACE}\\custom_directory\\project.json',
                     traceLevel: 'Verbose',
                     version: AutoVersion()
                     )
