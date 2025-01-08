@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    
+
+    stages {
+        stage('Install Platform') {
+            steps {
+                UiPathInstallPlatform(traceLevel: 'Verbose')
+            }
+        }
+        stage('Pack') {
+            steps {
+                UiPathPack( 
+                    disableBuiltInNugetFeeds: false,
+                    outputPath: '${WORKSPACE}\\Output',
+                    projectJsonPath: '${WORKSPACE}\\custom-folder\\project.json',
+                    traceLevel: 'Verbose',
+                    version: AutoVersion()
+                    )
+            }
+        }
+        stage(Deploy)
+        {
+            steps{
+                UiPathDeploy(
+                             createProcess: true,
+                             credentials: ExternalApp(accountForApp: 'walmazwnmqbk', applicationId: '7d51109e-8c0e-4c12-96d9-2a011fe05ad0', applicationScope: 'OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring',
+                             applicationSecret: '7d51109e-8c0e-4c12-96d9-2a011fe05ad0', identityUrl: ''),
+                             entryPointPaths: 'Main.xaml',
+                             folderName: 'Test', 
+                             orchestratorAddress: 'https://cloud.uipath.com/',
+                             orchestratorTenant: 'DefaultTenant', 
+                            packagePath: '${workspace}\\output',
+                            environments:'',
+                            traceLevel: 'Verbose'
+                            )
+            }
+        }
+    }
+}
